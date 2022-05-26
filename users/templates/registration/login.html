@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block css %}
+    
+<link href="../dist/output.css" rel="stylesheet">
+  
+{% endblock css %}
+{% block content %}
+<p class="text-2xl">Log in </p>
+
+<form method="post">
+
+
+    {% csrf_token %}
+    {%form.as_p%}
+    <a class="relative inline-block group focus:outline-none focus:ring" href="{% url 'signup' %}">
+        <span
+            class="absolute inset-0 transition-transform translate-x-0 translate-y-0 bg-yellow-300 group-hover:translate-y-1.5 group-hover:translate-x-1.5"></span>
+        <span
+            class="relative inline-block px-8 py-3 text-sm font-bold tracking-widest uppercase border-2 border-current">
+            <button type='submit'>Login</button>
+        </span>
+    </a>
+
+    <form>
+
+
+        {% endblock content %}
